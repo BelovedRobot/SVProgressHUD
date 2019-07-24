@@ -529,27 +529,27 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 
 #if TARGET_OS_IOS
 - (void)updateMotionEffectForOrientation:(UIInterfaceOrientation)orientation {
-    UIInterpolatingMotionEffectType xMotionEffectType = UIInterfaceOrientationIsPortrait(orientation) ? UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis : UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis;
-    UIInterpolatingMotionEffectType yMotionEffectType = UIInterfaceOrientationIsPortrait(orientation) ? UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis : UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis;
-    [self updateMotionEffectForXMotionEffectType:xMotionEffectType yMotionEffectType:yMotionEffectType];
+//     UIInterpolatingMotionEffectType xMotionEffectType = UIInterfaceOrientationIsPortrait(orientation) ? UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis : UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis;
+//     UIInterpolatingMotionEffectType yMotionEffectType = UIInterfaceOrientationIsPortrait(orientation) ? UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis : UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis;
+//     [self updateMotionEffectForXMotionEffectType:xMotionEffectType yMotionEffectType:yMotionEffectType];
 }
 #endif
 
 - (void)updateMotionEffectForXMotionEffectType:(UIInterpolatingMotionEffectType)xMotionEffectType yMotionEffectType:(UIInterpolatingMotionEffectType)yMotionEffectType {
-    UIInterpolatingMotionEffect *effectX = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:xMotionEffectType];
-    effectX.minimumRelativeValue = @(-SVProgressHUDParallaxDepthPoints);
-    effectX.maximumRelativeValue = @(SVProgressHUDParallaxDepthPoints);
+//     UIInterpolatingMotionEffect *effectX = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:xMotionEffectType];
+//     effectX.minimumRelativeValue = @(-SVProgressHUDParallaxDepthPoints);
+//     effectX.maximumRelativeValue = @(SVProgressHUDParallaxDepthPoints);
     
-    UIInterpolatingMotionEffect *effectY = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:yMotionEffectType];
-    effectY.minimumRelativeValue = @(-SVProgressHUDParallaxDepthPoints);
-    effectY.maximumRelativeValue = @(SVProgressHUDParallaxDepthPoints);
+//     UIInterpolatingMotionEffect *effectY = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:yMotionEffectType];
+//     effectY.minimumRelativeValue = @(-SVProgressHUDParallaxDepthPoints);
+//     effectY.maximumRelativeValue = @(SVProgressHUDParallaxDepthPoints);
     
-    UIMotionEffectGroup *effectGroup = [UIMotionEffectGroup new];
-    effectGroup.motionEffects = @[effectX, effectY];
+//     UIMotionEffectGroup *effectGroup = [UIMotionEffectGroup new];
+//     effectGroup.motionEffects = @[effectX, effectY];
     
-    // Clear old motion effect, then add new motion effects
-    self.hudView.motionEffects = @[];
-    [self.hudView addMotionEffect:effectGroup];
+//     // Clear old motion effect, then add new motion effects
+//     self.hudView.motionEffects = @[];
+//     [self.hudView addMotionEffect:effectGroup];
 }
 
 - (void)updateViewHierarchy {
